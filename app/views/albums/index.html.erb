@@ -1,7 +1,11 @@
 <h1>This is the Album's page.</h1>
 <ul>
+<a href="/albums/new">Click here to add new album</a>
+<br>
 <%@albums.each do |album|%> 
-<a href="/albums/<%=album.id%>/edit">Click to edit album</a>
+<a href="/albums/<%=album.id%>/edit">Click here to edit album</a>
+<li><a href="/albums/<%=album.id%>">Click here to see the album</a></li>
+<br>
 <li>Album Title: <%=album.title%></li>
 <br>
 <li>Album Artist: <%=album.artist%></li>

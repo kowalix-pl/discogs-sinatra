@@ -2,8 +2,7 @@ class AlbumsController < ApplicationController
 
   # GET: /albums
   get "/albums" do
-    @albums = [Album.new({artist:"Michael Jackson",title:"Thriller",rating:100,id:1}), Album.new({artist:"Michael Bolton",title:"Thr",rating:10,id:2})]
-
+    @albums = Album.all 
     erb :"/albums/index.html"
   end
 
@@ -14,16 +13,20 @@ class AlbumsController < ApplicationController
 
   # POST: /albums
   post "/albums" do
+    @album = Album.new({artist:params["artist"],title:params["title"],rating:params["rating"]})
+    @album.save
     redirect "/albums"
   end
 
   # GET: /albums/5
   get "/albums/:id" do
+    @album = Album.find(params[:id])
     erb :"/albums/show.html"
   end
 
   # GET: /albums/5/edit
   get "/albums/:id/edit" do
+    @album = Album.new({artist:"Michael Jackson",title:"Thriller",rating:100,id:1})
     erb :"/albums/edit.html"
   end
 

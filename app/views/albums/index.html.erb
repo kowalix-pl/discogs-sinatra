@@ -5,6 +5,9 @@
 <%@albums.each do |album|%> 
 <a href="/albums/<%=album.id%>/edit">Click here to edit album</a>
 <li><a href="/albums/<%=album.id%>">Click here to see the album</a></li>
+<form method="post" action="/albums/<%=album.id%>/delete">
+<input type="hidden" name="_method" value="DELETE">
+<input type="submit" value="Delete"></form>
 <br>
 <li>Album Title: <%=album.title%></li>
 <br>

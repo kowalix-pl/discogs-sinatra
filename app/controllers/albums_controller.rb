@@ -26,13 +26,15 @@ class AlbumsController < ApplicationController
 
   # GET: /albums/5/edit
   get "/albums/:id/edit" do
-    @album = Album.new({artist:"Michael Jackson",title:"Thriller",rating:100,id:1})
+    @album = Album.find(params[:id])
     erb :"/albums/edit.html"
   end
 
   # PATCH: /albums/5
   patch "/albums/:id" do
-    redirect "/albums/:id"
+    @album = Album.find(params[:id])
+    @album.update({artist:params["artist"],title:params["title"],rating:params["rating"]})
+    redirect "/albums/#{@album.id}"
   end
 
   # DELETE: /albums/5/delete

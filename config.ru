@@ -8,5 +8,6 @@ use Rack::MethodOverride
 run ApplicationController
 use UsersController
 use AlbumsController
+use HomeController
 
 

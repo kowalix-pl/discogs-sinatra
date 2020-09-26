@@ -1,8 +1,18 @@
 class UsersController < ApplicationController
 
-  # GET: /users
+  # GET: /login
   get "/login" do
     erb :"/users/login.html"
+  end
+
+   # POST: /login
+   post "/login" do
+    @user = User.find_by(username: params["username"])
+    if @user && @user.authenticate(params["password"])
+     redirect "/albums"
+    else  
+     redirect "/login"
+   end 
   end
 
   # GET: /users/new

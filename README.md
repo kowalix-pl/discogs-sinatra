@@ -9,9 +9,9 @@ Album's table
 - album title, artist, rating, user_id
 
 Approach with incremental testing steps
-1. Start with the album. 
-2. Create the user. 
-3. Create the sessions (login/out/register)
+1. Start with the album. [Done]
+2. Create the user. [Done]
+3. Create the sessions (login/out/register) [Done]
 4. Connect albums with users via foreign keys
 5. Polishing
 6. Deploynment with GH.

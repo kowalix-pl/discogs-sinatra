@@ -4,8 +4,8 @@ class ApplicationController < Sinatra::Base
   
   before do 
    unless logged_in?
-    if request.path_info != "/login"
-     redirect "/login"
+    if (request.path_info != "/login") && (request.path_info != "/register")
+       redirect "/login"
      end
      else
       if request.path_info == "/login"

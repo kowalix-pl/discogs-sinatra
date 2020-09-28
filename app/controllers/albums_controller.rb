@@ -2,7 +2,7 @@ class AlbumsController < ApplicationController
 
   # GET: /albums
   get "/albums" do
-    @albums = Album.all 
+    @albums = current_user.albums 
     erb :"/albums/index.html"
   end
 
@@ -13,8 +13,7 @@ class AlbumsController < ApplicationController
 
   # POST: /albums
   post "/albums" do
-    @album = Album.new({artist:params["artist"],title:params["title"],rating:params["rating"]})
-    @album.save
+    @album = current_user.albums.create({artist:params["artist"],title:params["title"],rating:params["rating"]})
     redirect "/albums"
   end
 

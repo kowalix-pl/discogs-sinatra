@@ -8,6 +8,7 @@ class UsersController < ApplicationController
    # POST: /login
    post "/login" do
     @user = User.find_by(username: params["username"])
+  
     if @user && @user.authenticate(params["password"])
       session[:user_id] = @user.id
       redirect "/"
@@ -15,6 +16,12 @@ class UsersController < ApplicationController
       redirect "/login"
    end 
   end
+
+  get "/logout" do
+   session.delete(:user_id)
+   redirect "/login"
+  end 
+
 
   # GET: /users/new
   get "/register" do

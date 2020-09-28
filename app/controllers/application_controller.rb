@@ -2,7 +2,19 @@ require './config/environment'
 
 class ApplicationController < Sinatra::Base
   
-  
+  before do 
+   unless logged_in?
+    if request.path_info != "/login"
+     redirect "/login"
+     end
+     else
+      if request.path_info == "/login"
+        redirect "/"
+      end 
+    end 
+  end 
+ 
+
   configure do
     set :public_folder, 'public'
     set :views, 'app/views'  

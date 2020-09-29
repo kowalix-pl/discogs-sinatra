@@ -33,5 +33,4 @@ class UsersController < ApplicationController
     User.create(username: params["username"], email: params["email"],password: params["password"])
     redirect "/login"
   end
-  
 end 

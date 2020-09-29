@@ -12,6 +12,24 @@ Approach with incremental testing steps
 1. Start with the album. [Done]
 2. Create the user. [Done]
 3. Create the sessions (login/out/register) [Done]
-4. Connect albums with users via foreign keys
-5. Polishing
+4. Connect albums with users via foreign keys [Done]
+5. Polishing - validations & checks/communication with user["Login/Logout"]
+Must have:
+   a). Error msg for wrong password confirmation 
+   b). Input validation for the forms
+       - Album name
+       - Password
+       - Password confirmation
+       - Author name 
+       - Username 
+       - User email 
+   c). Proper display of the elements on the web-forms.  
+   d). 404-page
+   d). Ability to login with both email and the login.
+Optional:
+   e). Login status message {you are logged in/out}
+   f). Some imagery. 
+   g). Picture field for the album image.
+   h). Album counter. How many albums are in the repo.
+   i). Search field [find album]. 
 6. Deploynment with GH.

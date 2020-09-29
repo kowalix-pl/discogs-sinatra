@@ -1,8 +1,8 @@
-class UsersController < ApplicationController
+class SessionController < ApplicationController
 
   # GET: /login
   get "/login" do
-    erb :"/users/login.html"
+    erb :"/sessions/login.html"
   end
 
    # POST: /login
@@ -25,7 +25,7 @@ class UsersController < ApplicationController
 
   # GET: /users/new
   get "/register" do
-    erb :"/users/register.html"
+    erb :"/sessions/register.html"
   end
 
   # POST: /users

@@ -6,7 +6,7 @@ end
 
 use Rack::MethodOverride
 run ApplicationController
-use UsersController
+use SessionController
 use AlbumsController
 use HomeController
 

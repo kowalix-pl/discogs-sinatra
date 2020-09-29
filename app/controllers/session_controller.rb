@@ -30,7 +30,13 @@ class SessionController < ApplicationController
 
   # POST: /users
   post "/register" do
-    User.create(username: params["username"], email: params["email"],password: params["password"])
-    redirect "/login"
+    @user = User.new(username: params["username"], email: params["email"],password: params["password"])
+    if params["password"] != params["password_confirmation"]
+      @user.errors.add(:password,"Your password and password confirmation do not match!")
+      erb :"/sessions/register.html"
+    else
+      @user.save 
+      redirect "/login"
+    end
   end
 end 

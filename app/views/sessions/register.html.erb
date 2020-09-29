@@ -10,6 +10,9 @@
 <br>
 <label for="password">Password:</label>
 <input type ="password" name ="password">
+<% if @user && @user.errors.any?%>
+<%= @user.errors.full_messages.join(',')%>
+<%end%>
 <br>
 <label for="password_confirmation">Password Confirmation:</label>
 <input type ="password" name = "password_confirmation">

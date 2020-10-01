@@ -13,8 +13,13 @@ class AlbumsController < ApplicationController
 
   # POST: /albums
   post "/albums" do
-    @album = current_user.albums.create({artist:params["artist"],title:params["title"],rating:params["rating"]})
-    redirect "/albums"
+    @album = current_user.albums.new({artist:params["artist"],title:params["title"],rating:params["rating"]})
+     if @album.valid? 
+        @album.save
+        redirect "/albums"
+     else 
+        erb :"/albums/new.html"
+     end 
   end
 
   # GET: /albums/5

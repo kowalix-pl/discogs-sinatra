@@ -37,8 +37,13 @@ class AlbumsController < ApplicationController
   # PATCH: /albums/5
   patch "/albums/:id" do
     @album = current_album
-    @album.update({artist:params["artist"],title:params["title"],rating:params["rating"]})
-    redirect "/albums/#{@album.id}"
+    @album.assign_attributes({artist:params["artist"],title:params["title"],rating:params["rating"]})
+     if @album.valid?
+        @album.save 
+        redirect "/albums/#{@album.id}"
+     else
+        erb :"/albums/edit.html"
+     end 
   end
 
   # DELETE: /albums/5/delete

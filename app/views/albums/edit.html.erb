@@ -6,6 +6,7 @@
 <label for="title">Title:</label>
 <br>
 <input type ="text" name ="title" value="<%=@album.title%>">
+<%= errors_for(@album, :title)%>
 <br>
 <label for="artist">Artist:</label>
 <input type ="text" name ="artist" value="<%=@album.artist%>">

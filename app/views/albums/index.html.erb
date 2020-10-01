@@ -1,18 +1,33 @@
-<h1>This is the Album's page.</h1>
-<ul>
+<h1>This is your Album's page.</h1>
 <a href="/albums/new">Click here to add new album</a>
-<br>
-<%@albums.each do |album|%> 
-<a href="/albums/<%=album.id%>/edit">Click here to edit album</a>
-<li><a href="/albums/<%=album.id%>">Click here to see the album</a></li>
-<form method="post" action="/albums/<%=album.id%>/delete">
-<input type="hidden" name="_method" value="DELETE">
-<input type="submit" value="Delete"></form>
-<br>
-<li>Album Title: <%=album.title%></li>
-<br>
-<li>Album Artist: <%=album.artist%></li>
-<br>
-<li>Album Rating: <%=album.rating%></li>
-<%end%></ul>
+
+<table border="1">
+  <thead>
+    <tr>
+      <th>Number</th>
+      <th>Title</th>
+      <th>Artist</th>
+      <th>Rating</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+      <%@albums.each.with_index(1) do |album,ind|%> 
+        <tr>
+            <th><%=ind%></th>
+            <th><%=album.title%></th>
+            <th><%=album.artist%></th>
+            <th><%=album.rating%></th>
+            <th>
+                <a href="/albums/<%=album.id%>/edit">Click here to edit your album</a><br>
+                <a href="/albums/<%=album.id%>">Click here to see your album</a>
+                <form method="post" action="/albums/<%=album.id%>/delete">
+                  <input type="hidden" name="_method" value="DELETE">
+                  <input type="submit" value="Delete Album">
+                </form>
+            </th>
+        </tr>
+      <%end%>
+  </tbody>
+</table>
 

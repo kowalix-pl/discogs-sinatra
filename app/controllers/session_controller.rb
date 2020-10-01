@@ -22,7 +22,6 @@ class SessionController < ApplicationController
    redirect "/login"
   end 
 
-
   # GET: /users/new
   get "/register" do
     erb :"/sessions/register.html"

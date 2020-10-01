@@ -35,3 +35,5 @@ Optional:
    h). Album counter. How many albums are in the repo.
    i). Search field [find album]. 
 6. Deploynment with GH.
+
+We are using partials to display error messages on models.

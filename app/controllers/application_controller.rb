@@ -34,6 +34,10 @@ class ApplicationController < Sinatra::Base
       nil 
      end 
     end 
+
+    def errors_for(model,attribute)
+      erb :"/partials/errors.html", {locals: {model: model, attribute: attribute}}
+    end 
   end
 
 end

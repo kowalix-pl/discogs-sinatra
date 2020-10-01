@@ -1,16 +1,13 @@
 <h1>Complete the below form to open your account:</h1>
 <form action="/register" method="post"><br>
-
 <label for="username"><b>User Name:</b></label>
 <input type ="text" name ="username">
 <label for="email"><b>Email Address:</b></label>
 <input type ="text" name ="email"><br><br>
 <label for="password"><b>Password:</b></label>
 <input type ="password" name ="password">
-<% if @user && @user.errors.any?%>
-<%= @user.errors.full_messages.join(',')%>
-<%end%>
 <label for="password_confirmation"><b>Repeat Password:</b></label>
-<input type ="password" name = "password_confirmation"><br><br>
+<input type ="password" name = "password_confirmation">
+<%= errors_for(@user, :password_confirmation)%>
 <input type ="submit" value="Register">
 </form>

@@ -13,7 +13,9 @@ class SessionController < ApplicationController
       session[:user_id] = @user.id
       redirect "/"
     else  
-      redirect "/login"
+      @user=User.new
+      @user.errors.add(:username,"Invalid login credentials")
+      erb :"/sessions/login.html"
    end 
   end
 

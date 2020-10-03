@@ -8,7 +8,8 @@
     </tr>
     <tr>
      <td><label for="email"><b>Email Address:</b></label></td>
-     <td><input type ="text" placeholder="Enter the Email" name ="email" required><%= errors_for(@user, :email)%></td>
+     <td><input type ="text" placeholder="Enter the Email" name ="email" required>
+     <%= errors_for(@user, :email)%></td>
     </tr>
     <tr>
      <td><label for="password"><b>Password:</b></label></td>
@@ -16,7 +17,8 @@
     </tr> 
     <tr>
      <td><label for="password_confirmation"><b>Repeat Password:</b></label></td>
-     <td><input type ="password" placeholder="Repeat the Password" name = "password_confirmation" required><%= errors_for(@user, :password_confirmation)%></td>
+     <td><input type ="password" placeholder="Repeat the Password" name = "password_confirmation" required>
+     <%= errors_for(@user, :password_confirmation)%></td>
     </tr> 
     <tr>
       <td><input type ="submit" value="Register"></td>

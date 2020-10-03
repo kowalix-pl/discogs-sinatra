@@ -26,15 +26,14 @@ Album list displayed in a table form [Done]
        - Username 
        - User email 
    c). Proper display of the elements on the web-forms. [Done]  
-   d). 404-page 
-   d). Ability to login with both email and the login.
+   d). 404-page [Done]
+   d)Add return button from edit form to albums[Done]
+   e). Ability to login with both email and the login.
+   f). Search field [find album]. 
 Optional:
-   e). Login status message {you are logged in/out}
-   f). Some imagery. 
    g). Picture field for the album image.
    h). Album counter. How many albums are in the repo.
-   i). Search field [find album]. 
 6. Deploynment with GH.
 
 We are using partials to display error messages on models.
-Add return button from edit form to albums[Done]
+

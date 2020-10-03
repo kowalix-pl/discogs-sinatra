@@ -15,9 +15,9 @@ Approach with incremental testing steps
 4. Connect albums with users via foreign keys [Done]
 5. Polishing - validations & checks/communication with user["Login/Logout"]
 Must have:
-Album list displayed in a table form 
+Album list displayed in a table form [Done]
 1.Album name|Album Title|Album Rating|[Done]
-   a). Error msg for wrong password confirmation []
+   a). Error msg for wrong password confirmation [Done]
    b). Input validation for the forms [Done]
        - Album name
        - Password

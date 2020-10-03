@@ -21,6 +21,11 @@ class ApplicationController < Sinatra::Base
     enable :sessions
     set :session_secret, 'secret'
   end
+  
+  not_found do
+    status 404
+    erb :"not_found.html"
+  end
 
   helpers do 
     def logged_in?

@@ -25,7 +25,11 @@ class AlbumsController < ApplicationController
   # GET: /albums/5
   get "/albums/:id" do
     @album = current_album
-    erb :"/albums/show.html"
+    if @album
+     erb :"/albums/show.html" 
+    else
+     erb :"not_found.html"
+    end
   end
 
   # GET: /albums/5/edit
@@ -55,7 +59,11 @@ class AlbumsController < ApplicationController
 
   helpers do
     def current_album
-      current_user.albums.find(params[:id])
+      begin
+      return current_user.albums.find(params[:id])
+      rescue
+        return false 
+      end 
     end 
   end
 end

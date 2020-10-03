@@ -13,7 +13,7 @@ class SessionController < ApplicationController
   
     if @user && @user.authenticate(params["password"])
       session[:user_id] = @user.id
-      redirect "/"
+      redirect "/albums"
     else  
       @user=User.new
       @user.errors.add(:username,"Invalid login credentials")

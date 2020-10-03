@@ -9,7 +9,7 @@ class ApplicationController < Sinatra::Base
      end
      else
       if request.path_info == "/login"
-        redirect "/"
+        redirect "/albums"
       end 
     end 
   end 

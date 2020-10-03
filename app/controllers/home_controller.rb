@@ -1,8 +1,7 @@
 class HomeController < ApplicationController
 
   get '/' do
-    @current_user = current_user
-    erb :"/home/index.html"
+    redirect "/albums"
   end
 
 end 

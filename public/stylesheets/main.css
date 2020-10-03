@@ -121,3 +121,9 @@
 .logout{
   text-align: right;
 }
+.logout form{
+  display: inline;
+}
+.logout form input{
+  font-size: 20px;
+}

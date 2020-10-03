@@ -28,9 +28,9 @@ Album list displayed in a table form [Done]
    c). Proper display of the elements on the web-forms. [Done]  
    d). 404-page [Done]
    d)Add return button from edit form to albums[Done]
-   e). Ability to login with both email and the login.
-   f). Search field [find album]. 
+   e). Ability to login with both email and the login.[Done]
 Optional:
+   f). Search field to find album. 
    g). Picture field for the album image.
    h). Album counter. How many albums are in the repo.
 6. Deploynment with GH.

@@ -127,3 +127,7 @@
 .logout form input{
   font-size: 20px;
 }
+
+.login_form input {
+ width: 20em
+}

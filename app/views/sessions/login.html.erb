@@ -1,16 +1,16 @@
-<h2>Welcome to DiscogsSinatra - Your one & only album database!</h2>
+<h2>Welcome to DiscogsSinatra - The only album database you will ever need!</h2>
 
 
-<form action="/login" method="post">
+<form action="/login" method="post" class="login_form">
   <div class="imgcontainer">
-    <img src="/images/corneal-small.png" alt="Avatar" class="avatar">
+    <img src="/images/album.png" alt="Avatar" class="avatar">
   </div>
 
   <div class="container">
    <table>
     <tr>
       <td><label for="uname"><b>Username:</b></label></td>
-      <td><input type="text" placeholder="Enter Username or Email" name="username" required></td>
+      <td><input type="text" placeholder="Enter Username or Email address" name="username" required></td>
       <%= errors_for(@user, :username)%>
     </tr>
     <tr>

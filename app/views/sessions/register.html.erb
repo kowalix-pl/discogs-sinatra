@@ -1,13 +1,27 @@
-<h1>Complete the below form to open your account:</h1>
+<h2>Complete the form below to register:</h2>
 <form action="/register" method="post"><br>
-<label for="username"><b>User Name:</b></label>
-<input type ="text" name ="username">
-<label for="email"><b>Email Address:</b></label>
-<input type ="text" name ="email"><br><br>
-<label for="password"><b>Password:</b></label>
-<input type ="password" name ="password">
-<label for="password_confirmation"><b>Repeat Password:</b></label>
-<input type ="password" name = "password_confirmation">
-<%= errors_for(@user, :password_confirmation)%>
-<input type ="submit" value="Register">
-</form>
+
+  <table>
+    <tr>
+      <td><label for="username"><b>User Name:</b></label></td>
+      <td><input type ="text" placeholder="Enter the Username" name ="username" required></td>
+    </tr>
+    <tr>
+     <td><label for="email"><b>Email Address:</b></label></td>
+     <td><input type ="text" placeholder="Enter the Email" name ="email" required><%= errors_for(@user, :email)%></td>
+    </tr>
+    <tr>
+     <td><label for="password"><b>Password:</b></label></td>
+     <td><input type ="password" placeholder="Enter the Password" name ="password" required></td>
+    </tr> 
+    <tr>
+     <td><label for="password_confirmation"><b>Repeat Password:</b></label></td>
+     <td><input type ="password" placeholder="Repeat the Password" name = "password_confirmation" required><%= errors_for(@user, :password_confirmation)%></td>
+    </tr> 
+    <tr>
+      <td><input type ="submit" value="Register"></td>
+    </tr>
+    </table>
+       
+  
+  

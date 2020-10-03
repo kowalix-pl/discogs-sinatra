@@ -1,18 +1,29 @@
-<h1>Plesase edit your album.</h1>
+<!DOCTYPE html>
+ <html>
+  <body>
+  <h2>Edit Album</h2>
 
 <form action="/albums/<%= @album.id %>" method="post">
   <input id="hidden" type="hidden" name="_method" value="patch">
-<br>
-<label for="title">Title:</label>
-<br>
-<input type ="text" name ="title" value="<%=@album.title%>">
-<%= errors_for(@album, :title)%>
-<br>
-<label for="artist">Artist:</label>
-<input type ="text" name ="artist" value="<%=@album.artist%>">
-<br>
-<label for="rating">Rating:</label>
-<input type ="number" name ="rating" value="<%=@album.rating%>">
-<br>
-<input type ="submit" value="Submit">
-</form>
+  <table>
+     <tr>
+      <td><label for="title"><b>Title:</b></label></td>
+      <td><input type ="text" name ="title" value="<%=@album.title%>"></td>
+      <%= errors_for(@album, :title)%>
+     </tr>
+    <tr>
+      <td><label for="artist"><b>Artist:</b></label></td>
+      <td><input type ="text" name ="artist" value="<%=@album.artist%>"></td>
+         <%= errors_for(@album, :artist)%>
+    </tr>
+    <tr>
+      <td><label for="rating"><b>Rating:</b></label></td>
+      <td><input type ="number" name ="rating" value="<%=@album.rating%>"></td>
+    </tr>
+    <tr>
+      <td><input type ="submit" value="Submit">
+    </tr>
+     </form>
+    </table>
+  </body>
+</html>

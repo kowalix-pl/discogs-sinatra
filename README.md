@@ -37,3 +37,4 @@ Optional:
 6. Deploynment with GH.
 
 We are using partials to display error messages on models.
+Add return button from edit form to albums

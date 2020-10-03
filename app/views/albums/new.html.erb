@@ -1,15 +1,21 @@
-<h1>Use the below form to add new album.</h1>
+<h2>Add New Album</h2>
+
 <form action="/albums" method="post">
-<label for="title">Title:</label>
-<br>
-<input type ="text" name ="title">
-<%= errors_for(@album, :title)%>
-<br>
-<label for="artist">Artist:</label>
-<input type ="text" name ="artist">
-<br>
-<label for="rating">Rating:</label>
-<input type ="number" name ="rating">
-<br>
-<input type ="submit" value="Submit">
+
+<table>
+  <tr>
+    <td><label for="title"><b>Title:</b></label></td>
+    <td><input type ="text" placeholder="Enter the Title" name ="title" required></td>
+    <%= errors_for(@album, :title)%><br>
+  </tr>
+  <tr>
+    <td><label for="artist"><b>Artist:</b></label></td>
+    <td><input type ="text" placeholder="Enter the Artist" name ="artist" required></td>
+  </tr>
+  <tr>
+    <td><label for="rating"><b>Rating:</b></label></td>
+    <td><input type ="number" placeholder="Choose the Rating" name ="rating" required></td>
+   </tr>
+   </table><br>
+   <input type ="submit" value="Submit">
 </form>

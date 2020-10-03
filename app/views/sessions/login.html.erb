@@ -1,26 +1,28 @@
-<h1>Welcome to your personal album database.</h1>
+<h2>Welcome to DiscogsSinatra - Your one & only album database!</h2>
 
-<a href="/register">Click here to register</a>
+
 <form action="/login" method="post">
   <div class="imgcontainer">
-    <img src="img_avatar2.png" alt="Avatar" class="avatar">
+    <img src="/images/corneal-small.png" alt="Avatar" class="avatar">
   </div>
 
   <div class="container">
-    <label for="uname"><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" name="username" required>
-
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="password" required>
-
-    <button type="submit"><b>Login</b></button>
-    <label>
-      <input type="checkbox" checked="checked" name="remember"> Remember me
-    </label>
+   <table>
+    <tr>
+      <td><label for="uname"><b>Username:</b></label></td>
+      <td><input type="text" placeholder="Enter Username" name="username" required></td>
+    </tr>
+    <tr>
+      <td><label for="psw"><b>Password:</b></label></td>
+      <td><input type="password" placeholder="Enter Password" name="password" required></td>
+    </tr>
+    <tr> 
+      <td><button type="submit"><b>Login</b></button><br></td><br>
+    </tr>
+    <tr> 
+      <a href="/register">Click here to register</a>
+    </tr>
+   </table>
   </div>
-
-  <div class="container" style="background-color:#f1f1f1">
-    <button type="button" class="cancelbtn">Cancel</button>
-    <span class="password">Forgot <a href="#">password?</a></span>
-  </div>
+   
 </form>

@@ -9,16 +9,13 @@ From now on you will not have to waste your time trying to memorise your favouri
    `git clone git@github.com:kowalix-pl/discogs-sinatra.git`
    Install all necessary gems with the command:
    `bundle install`
-   Create and migrate the database:
-   `rake db:create && rake db:migrate`
+   Migrate the database using the command:
+   `rake db:migrate`
 3. Running  Guide:
    Use `shotgun` to run the application. 
 4. Licensing Info - DiscogsSinatra uses an MIT license.
 
-1. Complete Readme
-2. Delete HP
-3. Login form
-4. Favicon
+
 
 
 

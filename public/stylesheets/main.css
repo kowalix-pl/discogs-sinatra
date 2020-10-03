@@ -117,3 +117,7 @@
 .error_message{
   color :red;
 }
+
+.logout{
+  text-align: right;
+}

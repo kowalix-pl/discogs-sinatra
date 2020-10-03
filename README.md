@@ -18,15 +18,15 @@ Must have:
 Album list displayed in a table form 
 1.Album name|Album Title|Album Rating|[Done]
    a). Error msg for wrong password confirmation []
-   b). Input validation for the forms
+   b). Input validation for the forms [Done]
        - Album name
        - Password
        - Password confirmation
        - Author name 
        - Username 
        - User email 
-   c). Proper display of the elements on the web-forms.  
-   d). 404-page
+   c). Proper display of the elements on the web-forms. [Done]  
+   d). 404-page 
    d). Ability to login with both email and the login.
 Optional:
    e). Login status message {you are logged in/out}
@@ -37,4 +37,4 @@ Optional:
 6. Deploynment with GH.
 
 We are using partials to display error messages on models.
-Add return button from edit form to albums
+Add return button from edit form to albums[Done]

@@ -10,8 +10,10 @@ From now on you will not have to waste your time trying to memorise your favouri
 
    Clone the repository using the command:
    `git clone git@github.com:kowalix-pl/discogs-sinatra.git`
+
    Install all necessary gems with the command:
    `bundle install`
+   
    Migrate the database using the command:
    `rake db:migrate`
 
